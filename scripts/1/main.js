@@ -1,8 +1,8 @@
 require([
     "hello"
 ], function (hello) {
-    document.writeln("hello world!!");
-    document.writeln("<br/>");
+    document.write("hello world!!");
+    document.write("<br/>");
     // document.writeln(hello.name);
     
 });
