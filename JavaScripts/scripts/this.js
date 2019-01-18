@@ -1,13 +1,17 @@
 require.config({
-    baseUrl: "scripts",
+    baseUrl: "scripts/",
     paths: {
         jquery: "lib/jquery",
         $templ: "lib/jquery-tmpl"
     }
 });
-require(["$templ"], function ($templ) {
-    alert(100);
-    console.log($templ);
+require(["jquery","$templ"], function ($,$templ) {
+    // alert(100);
+    console.log($("body"));
+    // console.log($templ);
+    
+    document.write(100);
+    document.write("<br/>");
     var obj = {
         bar: 1,
         foo: function () {
@@ -27,20 +31,20 @@ require(["$templ"], function ($templ) {
     obj.foo();
     foo();
 
+    var x = 1;
 
     var f = function () {
         console.log(this);
         console.log(this.x);
     }
 
-    var x = 1;
     var obj = {
-        f: f,
         x: 2,
+        f: f,
     };
 
     // 单独执行
-    f();// 1
+    f(this);// 1
 
     // obj 环境执行
     obj.f(); // 2
