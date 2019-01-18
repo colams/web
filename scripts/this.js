@@ -1,5 +1,6 @@
-require([],function(){
+require(["jquery-tmpl"],function($templ){
     alert(100);
+    console.log($templ);
     var obj = {
         bar: 1,
         foo: function () {
