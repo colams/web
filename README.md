@@ -1,4 +1,4 @@
-# staticWeb
+# web
 static web
 
 
